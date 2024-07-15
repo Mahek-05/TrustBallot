@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block title %}Vote Trust{% endblock %}
+
+{% block content %}
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .btn-container {
+      display: grid;
+      gap: 20px;
+      background-color: rgba(52, 152, 219, 0.5); /* Adjusted background color with 50% transparency */
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #333;
+      color: white;
+    }
+  </style>
+
+  <div class="center">
+    <div class="btn-container">
+      <form method="post" action="/">
+        <button class="btn btn-primary" type="submit" value="ADMIN" name="admin">ADMIN</button>
+        <button class="btn btn-info" type="submit" value="VOTER" name="voter">VOTER</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
